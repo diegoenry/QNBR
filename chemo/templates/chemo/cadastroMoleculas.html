@@ -1,0 +1,59 @@
+{% extends "chemo/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+<style>
+            .btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 20%;
+    min-height: 100%;
+    width: 100px;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+</style>
+  <div class="py-5 text-center" style="margin-top: 50px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="mb-3">Cadastro de Moléculas</h1>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="exampleFormControlFile1" class="text-center">Escolha um arquivo .SDF para realizar o cadastro de moléculas.</label>
+            </div>
+            <div class="d-inline-flex p-1">
+                <form method="post" enctype="multipart/form-data" action="uploadMolecule">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <label class="input-group-btn">
+                            <span class="btn btn-dark">
+                                Escolha o arquivo&hellip; <input type="file" name="molecules" style="display: none;" accept=".sdf">
+                            </span>
+                        </label>
+                        <input type="text" class="form-control" readonly>
+                        &nbsp;
+                        <input id='uploadBtn' class="btn btn-success" style="height: 100%;" type="submit" value="Upload">
+                    </div>
+                    
+                    <div id="uploadBtnDiv" ></div>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

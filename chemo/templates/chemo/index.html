@@ -1,0 +1,106 @@
+{% extends "chemo/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="section-parallax text-center"
+     style="	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
+    <div class="container my-5 bg-light p-4">
+        <div class="row">
+            <div class="col-md-12"><img class="img-fluid d-block mx-auto" src="{% static 'chemo/img/quimioteca.png' %}">
+            </div>
+        </div>
+        <div class="row mx-auto">
+            <div class="col-md-12">
+                <h1 class="mb-3">Bem vindo à Quimioteca Nacional do Brasil</h1>
+                <p class=""> A Quimioteca Nacional é uma ferramenta que foi projetada para servir à comunidade científica com
+                    a missão de valorizar os produtos de síntese e extração, obtidos por grupos de pesquisa brasileiros. A força
+                    dessa iniciativa será a habilidade de conectar biólogos e químicos para o desenvolvimento de novos “hits”
+                    seu uso será um reaproveitamento direto dos recursos despendidos pelas agências de fomento no
+                    desenvolvimento dos compostos.</p>
+		   </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="py-5 section bg-faded bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="mb-4">Financiamento</h1>
+                <p class=""> A Quimioteca Nacional é financiada principalmente pelo Edital CAPES Biologia Computacional 
+                implementado na parceria do INMETRO, UFRJ e UFMG, expandida para a UFJF e UNISTRA</p>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-4">
+                <img class="center-block img-fluid d-block" src="{% static 'chemo/img/capes.png' %}"> </div>
+            <div class="col-md-2 col-4">
+                <img class="center-block img-fluid d-block" src="{% static 'chemo/img/inmetro.png' %}"> </div>
+            <div class="col-md-2 col-4">
+                <img class="center-block img-fluid d-block" src="{% static 'chemo/img/ufrj.png' %}"> </div>
+            <div class="col-md-2 col-4">
+                <img class="center-block img-fluid d-block" src="{% static 'chemo/img/ufmg.png' %}"> </div>
+            <div class="col-md-2 col-4">
+                <img class="center-block img-fluid d-block" src="{% static 'chemo/img/ufjf.png' %}"> </div>
+            <div class="col-md-2 col-4">
+                <img class="center-block img-fluid d-block" src="{% static 'chemo/img/unistra.png' %}"> </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Speakers -->
+<div class="py-5 bg-light" id="speakers">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Desenvolvedores</h1>
+            </div>
+        </div>
+        <div class="row">
+<!--            <div class="col-6 col-lg-4 animate-in-right"> !-->
+            <div class="col-sm animate-in-right">
+
+                <a href="#">
+                    <img src="{% static 'chemo/img/Thallys.jpg' %}" class="center-block img-fluid my-3 rounded-circle"
+                         width="150">
+                    <h3 class="mb-0 text-secondary"><b>Thallys Nogueira</b></h3>
+                    <p class="text-muted">Front-end developer</p>
+                </a>
+            </div>
+<!--            <div class="col-6 col-lg-4 animate-in-right"> !-->
+            <div class="col-sm animate-in-right">
+
+                <a href="#">
+                    <img src="{% static 'chemo/img/Artur.jpg' %}" class="center-block img-fluid my-3 rounded-circle"
+                         width="150">
+                    <h3 class="mb-0 text-secondary"><b>Artur Rossi</b></h3>
+                    <p class="text-muted">Back-end developer</p>
+                </a>
+            </div>
+           
+            <div class="col-sm animate-in-right">
+                <a href="#">
+                    <img src="{% static 'chemo/img/Priscila.jpg' %}" class="center-block img-fluid my-3 rounded-circle"
+                         width="150">
+                    <h3 class="mb-0 text-secondary"><b>Priscila Figueiredo</b></h3>
+                    <p class="text-muted">Researcher</p>
+                </a>
+            </div>
+
+            <div class="col-sm animate-in-right">
+                <a href="#">
+                    <img src="{% static 'chemo/img/Diego.jpg' %}" class="center-block img-fluid my-3 rounded-circle"
+                         width="150">
+                    <h3 class="mb-0 text-secondary"><b>Diego Gomes</b></h3>
+                    <p class="text-muted">Principal Investigator</p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
